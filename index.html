@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Fill</title>
+</head>
+<body>
+    <div id="form_container">
+    <label>
+        Name:
+        <input type="text" id="name_input" placeholder="Enter your name" />
+    </label>
+    <br/>
+    <label>
+        Email:
+        <input type="email" id="email_input" placeholder="Enter your email" />
+    </label>
+    <br/>
+    <button type="button" id="submit_button">Submit</button>
+    </div>
+</body>
+<script>
+document.getElementById("submit_button").addEventListener("click", () => {
+  alert("Working!");
+});
+</script>
+</html>
