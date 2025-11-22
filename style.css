@@ -1,0 +1,37 @@
+#form_container{
+    background-color: lightgrey;
+    height: 100px;
+    width: 250px;
+    margin: auto;
+    padding: 20px;
+
+}
+label{
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+button{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 75px;
+    margin-right: 70px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    align-items: center;
+}
+#submit_button:hover{
+    background-color: black;
+    color: red;
+    cursor: pointer;
+}
