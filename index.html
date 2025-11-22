@@ -10,20 +10,37 @@
     <div id="form_container">
     <label>
         Name:
-        <input type="text" id="name_input" placeholder="Enter your name" />
+        <input id="name_input" value=""/>
     </label>
     <br/>
     <label>
         Email:
-        <input type="email" id="email_input" placeholder="Enter your email" />
+        <input id="email_input" value=""/>
     </label>
     <br/>
-    <button type="button" id="submit_button">Submit</button>
-    </div>
+    <button onclick="submit()" id="submit_button">Submit</button>
+    <p id="output_name">Name:</p>
+    <p id="output_email">Email:</p>
+    <button onclick="sendMail()" id="Send_mail">Send Mail</button>
+</div>
+    
 </body>
 <script>
-document.getElementById("submit_button").addEventListener("click", () => {
-  alert("Working!");
-});
+    var name_input = document.getElementById("name_input");
+    var email_input = document.getElementById("email_input");
+    var output = document.getElementById("output_name");
+    var output_email = document.getElementById("output_email");
+    var Send_mail = document.getElementById("Send_mail");
+    
+    function submit(){
+        var name_value = name_input.value;
+        var email_value = email_input.value;
+        output_name.textContent = "Name: "+ name_value;
+        output_email.textContent = "Email: "+ email_value;        
+    }    
+    function sendMail(){
+        var send_mail= output_email.textContent;
+        console.log(send_mail);
+} 
 </script>
 </html>
