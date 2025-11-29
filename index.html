@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Form Fill</title>
-</head>
-<body>
-    <div id="form_container">
-    <label>
-        Name:
-        <input id="name_input" value=""/>
-    </label>
-    <br/>
-    <label>
-        Email:
-        <input id="email_input" value=""/>
-    </label>
-    <br/>
-    <button onclick="submit()" id="submit_button">Submit</button>
-    <p id="output_name">Name:</p>
-    <p id="output_email">Email:</p>
-    <button onclick="sendMail()" id="Send_mail">Send Mail</button>
-</div>
-    
-</body>
-<script>
-    var name_input = document.getElementById("name_input");
-    var email_input = document.getElementById("email_input");
-    var output = document.getElementById("output_name");
-    var output_email = document.getElementById("output_email");
-    var Send_mail = document.getElementById("Send_mail");
-    
-    function submit(){
-        var name_value = name_input.value;
-        var email_value = email_input.value;
-        output_name.textContent = "Name: "+ name_value;
-        output_email.textContent = "Email: "+ email_value;        
-    }    
-    function sendMail(){
-        var send_mail= output_email.textContent;
-        console.log(send_mail);
-} 
-</script>
+<html>
+    <link rel="stylesheet" href="style.css"/>
+    <title>TODO LIST</title>
+    <div id="container1">
+     <h1 id="head1">TO DO List</h1>
+     <input id="input"/>
+     <button onclick="addingTodo()" id="addbtn">ADD</button>
+    </div>
+
+    <div id="container2">
+
+    </div>
+
+    <script>
+       input = document.getElementById("input");
+       addbtn = document.getElementById("addbtn");
+
+        let todos = []
+
+        function addingTodo(){
+            todos.push(input.value);
+            addlist(input.value);
+            input.value="";
+        }
+        function addlist(inputText){
+            let para = document.createElement("p");
+            para.innerText = inputText;
+            //console.log(para.innerText);
+            document.getElementById("container2").appendChild(para);
+            para.addEventListener("click",()=>{
+                para.style.textDecoration = "line-through"
+                remove(inputText);
+            });
+        }
+
+    </script>
 </html>
