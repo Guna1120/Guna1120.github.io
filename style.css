@@ -1,37 +1,33 @@
-#form_container{
-    background-color: lightgrey;
-    height: 100px;
-    width: 250px;
+#container1{
+    padding: 30px;
     margin: auto;
-    padding: 20px;
+    margin-top: 30px;
+    background-color: rgb(37, 23, 81);
+    color: rgb(217, 200, 176);
+    height: 100px;
+    width: 300px;
+}
+#container2{
+    padding: 30px;
+    margin: auto;
+    background-color: rgb(37, 23, 81);
+    color: rgb(217, 200, 176);
+    height: 400px;
+    width: 300px;
+}
 
+#addbtn{
+    background-color: rgb(5, 0, 13);
+    color: rgb(252, 249, 249);
+    border-radius: 30px;
 }
-label{
-    display: inline-block;
-    text-align: left;
-    margin-left: 10px;
+#addbtn:hover{
+cursor: pointer;
+background-color: rgb(79, 6, 6);
 }
-input{
+#head1{
+    color: #d3af37;
     padding: 5px;
-    border-radius: 5px;
-    border: 1px solid grey;
 }
-button{
-    background-color: blue;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 75px;
-    margin-right: 70px;
-    margin-bottom: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100px;
-    align-items: center;
-}
-#submit_button:hover{
-    background-color: black;
-    color: red;
-    cursor: pointer;
-}
+
+
